@@ -1,13 +1,17 @@
 syntax enable
 
 set backspace=indent,eol,start
-"let mapleader = ','			"non mi convince...
-set number				"line numbers
-set linespace=15			"funzia solo in modalità grafica
+"let mapleader = ','			"non mi convince..."
+set number				"line numbers"
+set linespace=15			"funzia solo in modalità grafica"
 
 
-"------------------ Mappings -------------------"
-colorscheme atom-dark
+"------------------ Layout -------------------"
+" con questo becca i colorscheme a 256 colori, la mmerda"
+if has('unix')
+	set t_Co=256
+endif
+colorscheme atom-dark-256
 
 
 "------------------ Mappings -------------------"
