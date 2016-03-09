@@ -1,24 +1,23 @@
 syntax enable
 
 set backspace=indent,eol,start
-"let mapleader = ','			"non mi convince..."
-set number				"line numbers"
-set linespace=15			"funzia solo in modalità grafica"
+"let mapleader = ','			"non mi convince...
+set number				"line numbers
+set linespace=15			"funzia solo in modalità grafica
 
 
-"------------------ Layout -------------------"
-" con questo becca i colorscheme a 256 colori, la mmerda"
-if has('unix')
-	set t_Co=256
-endif
-colorscheme atom-dark-256
+
+"------------------ Visuals -------------------"
+set t_Co=256				"con questo becca i colorscheme a 256 colori, la mmerda
+colorscheme atom-dark-256		
+
 
 
 "------------------ Mappings -------------------"
-" configurazione Vim.
+" configurazione Vim"
 nmap <Leader>ev :tabedit $MYVIMRC<cr>	"ev apre il file di configurazione
-" rimuove l'highlight sulla ricerca
-nmap <Leader><space> :nohlsearch<cr>
+nmap <Leader><space> :nohlsearch<cr>	"rimuove l'highlight sulla ricerca
+
 
 
 "------------------ Search -------------------"
@@ -27,8 +26,18 @@ set hlsearch
 set incsearch
 
 
-"---------------- Auto-Commands ----------------"
 
+"------------------ Split -------------------"
+set splitbelow
+set splitright
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+
+
+"---------------- Auto-Commands ----------------"
 " autosource .vmirc sul salvataggio
 " questa menata non ho capito a che cazzo serve, ma se no rallenta
 augroup autosourcing
