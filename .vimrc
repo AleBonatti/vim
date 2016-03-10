@@ -1,3 +1,7 @@
+set nocompatible   		        "latest Vim settings/options
+
+so ~/.vim/plugins.vim			"richiama la configurazione di Vundle e dei plugin
+
 syntax enable
 
 set backspace=indent,eol,start
@@ -17,6 +21,7 @@ colorscheme atom-dark-256
 " configurazione Vim"
 nmap <Leader>ev :tabedit $MYVIMRC<cr>	"ev apre il file di configurazione
 nmap <Leader><space> :nohlsearch<cr>	"rimuove l'highlight sulla ricerca
+nmap <C-1> :NERDTreeToggle<cr>		"attiva/disattiva NerdTree 
 
 
 
